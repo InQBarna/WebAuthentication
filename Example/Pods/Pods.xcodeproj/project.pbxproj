@@ -1,0 +1,618 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1644498424B2967995988292B2E63B5F /* Pods-WebAuthentication_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E33B69ED95D18558FAD0DFB895E5C3 /* Pods-WebAuthentication_Tests-dummy.m */; };
+		28D89D01E61B73B1D77587FFE08553D0 /* WebAuthenticationInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D64E79328E2C66B9CEE165302C19F0 /* WebAuthenticationInterface.swift */; };
+		50252E457152DB3825432D9DDB2E4E15 /* WebAuthentication-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25EACEBDBE2098C24F79B1193252EBF2 /* WebAuthentication-dummy.m */; };
+		5E62BDBBD14F928802D838E8B688D702 /* WebAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D28893EFA79B2E56E50431DDF66370 /* WebAuthentication.swift */; };
+		7D39BB182CC35119E6B8E232328DC06F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		8FA182E96029C91C53B94A2B94609B22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		A5F93BCA0AC4B5BDB41B68D103FB3AD9 /* ASWebAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE8C93B654A850CC09ACCD78A949748 /* ASWebAuthenticator.swift */; };
+		A9A5B05CCD4475227C6182E467310562 /* Pods-WebAuthentication_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ED2ED2A7ED34B00818679D7C888BB1D /* Pods-WebAuthentication_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9BBE788200D64E85444F876F4EA285C /* SafariWebVCAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D3EFAC3B0F53B114323691345C09F2 /* SafariWebVCAuthenticator.swift */; };
+		E3939A7434233FD77EA49BF1D2BE815A /* AuthConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC47E0AABED95EC11288084FA10E42CF /* AuthConfiguration.swift */; };
+		EED41BE1BD27D8F527BED333C425B9FD /* WebAuthentication-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D2467A6CD422A6C503B43EACAF5EACBD /* WebAuthentication-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83955831665C8A08CC6D49CF202E524E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6015718E44586F55BCD134C931BE8DB;
+			remoteInfo = WebAuthentication;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		25EACEBDBE2098C24F79B1193252EBF2 /* WebAuthentication-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WebAuthentication-dummy.m"; sourceTree = "<group>"; };
+		26FD92794ADD0792F473E7E1AF99D2E4 /* Pods-WebAuthentication_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WebAuthentication_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		33B9407F77CFAA02F85E127915A7B505 /* Pods-WebAuthentication_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WebAuthentication_Tests.modulemap"; sourceTree = "<group>"; };
+		3BC83DAF549A8607EE3BAEA076411DA8 /* WebAuthentication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WebAuthentication.debug.xcconfig; sourceTree = "<group>"; };
+		514DF2685529080A124C4BC570FF41EB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		79DE74F9665E735AAF4E4AF128A52D9A /* WebAuthentication.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = WebAuthentication.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7B3EAA9F8B25F7AACFB2BA0516A50A5D /* WebAuthentication-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WebAuthentication-prefix.pch"; sourceTree = "<group>"; };
+		8102FEF8E3BFAB756310B278F371331B /* WebAuthentication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WebAuthentication.framework; path = WebAuthentication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83E33B69ED95D18558FAD0DFB895E5C3 /* Pods-WebAuthentication_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WebAuthentication_Tests-dummy.m"; sourceTree = "<group>"; };
+		8A1E985D85ECCB8EB6EB8C9FF4877778 /* WebAuthentication-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WebAuthentication-Info.plist"; sourceTree = "<group>"; };
+		8E6857477A0E9B26157DE8E297064531 /* WebAuthentication.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WebAuthentication.modulemap; sourceTree = "<group>"; };
+		90C1C769232C64FFD4E5E38F2BBACC13 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		9A72D7D451C73FB977150AC43348C568 /* Pods-WebAuthentication_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WebAuthentication_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DE8C93B654A850CC09ACCD78A949748 /* ASWebAuthenticator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ASWebAuthenticator.swift; path = Sources/ASWebAuthenticator.swift; sourceTree = "<group>"; };
+		9ED2ED2A7ED34B00818679D7C888BB1D /* Pods-WebAuthentication_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WebAuthentication_Tests-umbrella.h"; sourceTree = "<group>"; };
+		9EE6FAE86CB86E95F410287C0D505E75 /* Pods-WebAuthentication_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WebAuthentication_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A2D28893EFA79B2E56E50431DDF66370 /* WebAuthentication.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebAuthentication.swift; path = Sources/WebAuthentication.swift; sourceTree = "<group>"; };
+		A692E65AD520905A8597297EECDE8297 /* Pods-WebAuthentication_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WebAuthentication_Tests-Info.plist"; sourceTree = "<group>"; };
+		BA0AF68B6252AE0ED767C4DFB175B8FB /* WebAuthentication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WebAuthentication.release.xcconfig; sourceTree = "<group>"; };
+		BC47E0AABED95EC11288084FA10E42CF /* AuthConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthConfiguration.swift; path = Sources/AuthConfiguration.swift; sourceTree = "<group>"; };
+		C0D3EFAC3B0F53B114323691345C09F2 /* SafariWebVCAuthenticator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SafariWebVCAuthenticator.swift; path = Sources/SafariWebVCAuthenticator.swift; sourceTree = "<group>"; };
+		C617EFEC1754977F4745D6F67B8D49BA /* Pods-WebAuthentication_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WebAuthentication_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		C7D64E79328E2C66B9CEE165302C19F0 /* WebAuthenticationInterface.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebAuthenticationInterface.swift; path = Sources/WebAuthenticationInterface.swift; sourceTree = "<group>"; };
+		CDBD8588D1EC830C0509631D61920668 /* Pods_WebAuthentication_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WebAuthentication_Tests.framework; path = "Pods-WebAuthentication_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2467A6CD422A6C503B43EACAF5EACBD /* WebAuthentication-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WebAuthentication-umbrella.h"; sourceTree = "<group>"; };
+		E14FC1BFFCB4A13E639AB38F541559F7 /* Pods-WebAuthentication_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WebAuthentication_Tests-frameworks.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26875834D11AE64120410A13DE8BE19B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D39BB182CC35119E6B8E232328DC06F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A4B50B38ACE963A12CA82D9E5052313 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FA182E96029C91C53B94A2B94609B22 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00FD7FFCC374BB356B406018E7B46873 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B8FD14AE7FF5C68A2CCFDE9EAE61CBC /* WebAuthentication */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		2B8FD14AE7FF5C68A2CCFDE9EAE61CBC /* WebAuthentication */ = {
+			isa = PBXGroup;
+			children = (
+				9DE8C93B654A850CC09ACCD78A949748 /* ASWebAuthenticator.swift */,
+				BC47E0AABED95EC11288084FA10E42CF /* AuthConfiguration.swift */,
+				C0D3EFAC3B0F53B114323691345C09F2 /* SafariWebVCAuthenticator.swift */,
+				A2D28893EFA79B2E56E50431DDF66370 /* WebAuthentication.swift */,
+				C7D64E79328E2C66B9CEE165302C19F0 /* WebAuthenticationInterface.swift */,
+				6BFA923A933A75ADA9ADA8BB5A50FAFA /* Pod */,
+				353371DA45370F6A3DC77C54017E5DD1 /* Support Files */,
+			);
+			name = WebAuthentication;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		353371DA45370F6A3DC77C54017E5DD1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E6857477A0E9B26157DE8E297064531 /* WebAuthentication.modulemap */,
+				25EACEBDBE2098C24F79B1193252EBF2 /* WebAuthentication-dummy.m */,
+				8A1E985D85ECCB8EB6EB8C9FF4877778 /* WebAuthentication-Info.plist */,
+				7B3EAA9F8B25F7AACFB2BA0516A50A5D /* WebAuthentication-prefix.pch */,
+				D2467A6CD422A6C503B43EACAF5EACBD /* WebAuthentication-umbrella.h */,
+				3BC83DAF549A8607EE3BAEA076411DA8 /* WebAuthentication.debug.xcconfig */,
+				BA0AF68B6252AE0ED767C4DFB175B8FB /* WebAuthentication.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/WebAuthentication";
+			sourceTree = "<group>";
+		};
+		4704918BD21E623696BCA523A71F4C38 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDBD8588D1EC830C0509631D61920668 /* Pods_WebAuthentication_Tests.framework */,
+				8102FEF8E3BFAB756310B278F371331B /* WebAuthentication.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55CF7E2DA37EAE2F168EB00B3022F498 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				76F29BCAAC0677A9248974512F3A9DB6 /* Pods-WebAuthentication_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6BFA923A933A75ADA9ADA8BB5A50FAFA /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				90C1C769232C64FFD4E5E38F2BBACC13 /* LICENSE */,
+				514DF2685529080A124C4BC570FF41EB /* README.md */,
+				79DE74F9665E735AAF4E4AF128A52D9A /* WebAuthentication.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		76F29BCAAC0677A9248974512F3A9DB6 /* Pods-WebAuthentication_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				33B9407F77CFAA02F85E127915A7B505 /* Pods-WebAuthentication_Tests.modulemap */,
+				9EE6FAE86CB86E95F410287C0D505E75 /* Pods-WebAuthentication_Tests-acknowledgements.markdown */,
+				26FD92794ADD0792F473E7E1AF99D2E4 /* Pods-WebAuthentication_Tests-acknowledgements.plist */,
+				83E33B69ED95D18558FAD0DFB895E5C3 /* Pods-WebAuthentication_Tests-dummy.m */,
+				E14FC1BFFCB4A13E639AB38F541559F7 /* Pods-WebAuthentication_Tests-frameworks.sh */,
+				A692E65AD520905A8597297EECDE8297 /* Pods-WebAuthentication_Tests-Info.plist */,
+				9ED2ED2A7ED34B00818679D7C888BB1D /* Pods-WebAuthentication_Tests-umbrella.h */,
+				C617EFEC1754977F4745D6F67B8D49BA /* Pods-WebAuthentication_Tests.debug.xcconfig */,
+				9A72D7D451C73FB977150AC43348C568 /* Pods-WebAuthentication_Tests.release.xcconfig */,
+			);
+			name = "Pods-WebAuthentication_Tests";
+			path = "Target Support Files/Pods-WebAuthentication_Tests";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				00FD7FFCC374BB356B406018E7B46873 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				4704918BD21E623696BCA523A71F4C38 /* Products */,
+				55CF7E2DA37EAE2F168EB00B3022F498 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2699557533613F4C5782DCF4D2A5E259 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED41BE1BD27D8F527BED333C425B9FD /* WebAuthentication-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3ECBF891920E0A1F5423F15987ED11D6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9A5B05CCD4475227C6182E467310562 /* Pods-WebAuthentication_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2852B3AFF735333BAC0F2B7468790312 /* Pods-WebAuthentication_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B26981DBF137C3C1BF5A6CBC9ADF4D4E /* Build configuration list for PBXNativeTarget "Pods-WebAuthentication_Tests" */;
+			buildPhases = (
+				3ECBF891920E0A1F5423F15987ED11D6 /* Headers */,
+				E9F5158D46800019F6FF91C6DCF10892 /* Sources */,
+				26875834D11AE64120410A13DE8BE19B /* Frameworks */,
+				F80E8F32DB6390F8B7933607A31FFA1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FC040FD03BAE0A645EAE5404DCC34A0 /* PBXTargetDependency */,
+			);
+			name = "Pods-WebAuthentication_Tests";
+			productName = "Pods-WebAuthentication_Tests";
+			productReference = CDBD8588D1EC830C0509631D61920668 /* Pods_WebAuthentication_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D6015718E44586F55BCD134C931BE8DB /* WebAuthentication */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFE893D6F267038705C2FB5C2D4CC910 /* Build configuration list for PBXNativeTarget "WebAuthentication" */;
+			buildPhases = (
+				2699557533613F4C5782DCF4D2A5E259 /* Headers */,
+				5EDA5BB523F40D802855818F9579FA53 /* Sources */,
+				4A4B50B38ACE963A12CA82D9E5052313 /* Frameworks */,
+				0AAF52C4DDB8D158782676674EF2C1ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebAuthentication;
+			productName = WebAuthentication;
+			productReference = 8102FEF8E3BFAB756310B278F371331B /* WebAuthentication.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 4704918BD21E623696BCA523A71F4C38 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2852B3AFF735333BAC0F2B7468790312 /* Pods-WebAuthentication_Tests */,
+				D6015718E44586F55BCD134C931BE8DB /* WebAuthentication */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0AAF52C4DDB8D158782676674EF2C1ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F80E8F32DB6390F8B7933607A31FFA1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5EDA5BB523F40D802855818F9579FA53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5F93BCA0AC4B5BDB41B68D103FB3AD9 /* ASWebAuthenticator.swift in Sources */,
+				E3939A7434233FD77EA49BF1D2BE815A /* AuthConfiguration.swift in Sources */,
+				B9BBE788200D64E85444F876F4EA285C /* SafariWebVCAuthenticator.swift in Sources */,
+				50252E457152DB3825432D9DDB2E4E15 /* WebAuthentication-dummy.m in Sources */,
+				5E62BDBBD14F928802D838E8B688D702 /* WebAuthentication.swift in Sources */,
+				28D89D01E61B73B1D77587FFE08553D0 /* WebAuthenticationInterface.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9F5158D46800019F6FF91C6DCF10892 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1644498424B2967995988292B2E63B5F /* Pods-WebAuthentication_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8FC040FD03BAE0A645EAE5404DCC34A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WebAuthentication;
+			target = D6015718E44586F55BCD134C931BE8DB /* WebAuthentication */;
+			targetProxy = 83955831665C8A08CC6D49CF202E524E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		39C67D3E77672250EF721A8E895CF182 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA0AF68B6252AE0ED767C4DFB175B8FB /* WebAuthentication.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WebAuthentication/WebAuthentication-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WebAuthentication/WebAuthentication-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WebAuthentication/WebAuthentication.modulemap";
+				PRODUCT_MODULE_NAME = WebAuthentication;
+				PRODUCT_NAME = WebAuthentication;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		431BA2B8298F0EE71735B9E0114E1955 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		7679CAC1BA3DD86CF132288B5D809D61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A72D7D451C73FB977150AC43348C568 /* Pods-WebAuthentication_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WebAuthentication_Tests/Pods-WebAuthentication_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WebAuthentication_Tests/Pods-WebAuthentication_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		787E8D5D404A0FC3FEB1DD4DD1722632 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C617EFEC1754977F4745D6F67B8D49BA /* Pods-WebAuthentication_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WebAuthentication_Tests/Pods-WebAuthentication_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WebAuthentication_Tests/Pods-WebAuthentication_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		79759604D78320E712558F49DF19AA9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		853FDC0DAFE6F4C993124FAC7CBD89AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BC83DAF549A8607EE3BAEA076411DA8 /* WebAuthentication.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WebAuthentication/WebAuthentication-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WebAuthentication/WebAuthentication-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WebAuthentication/WebAuthentication.modulemap";
+				PRODUCT_MODULE_NAME = WebAuthentication;
+				PRODUCT_NAME = WebAuthentication;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79759604D78320E712558F49DF19AA9F /* Debug */,
+				431BA2B8298F0EE71735B9E0114E1955 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B26981DBF137C3C1BF5A6CBC9ADF4D4E /* Build configuration list for PBXNativeTarget "Pods-WebAuthentication_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				787E8D5D404A0FC3FEB1DD4DD1722632 /* Debug */,
+				7679CAC1BA3DD86CF132288B5D809D61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFE893D6F267038705C2FB5C2D4CC910 /* Build configuration list for PBXNativeTarget "WebAuthentication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				853FDC0DAFE6F4C993124FAC7CBD89AD /* Debug */,
+				39C67D3E77672250EF721A8E895CF182 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

@@ -1,0 +1,16 @@
+PODS:
+  - WebAuthentication (0.1.0)
+
+DEPENDENCIES:
+  - WebAuthentication (from `../`)
+
+EXTERNAL SOURCES:
+  WebAuthentication:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WebAuthentication: 7a97168fcc2694f7fa1eb66e890dc4f726531716
+
+PODFILE CHECKSUM: 5ea3aa293a0345a410cebf92ec68c5aa9ee234cd
+
+COCOAPODS: 1.10.0
