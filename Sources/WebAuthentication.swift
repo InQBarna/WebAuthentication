@@ -46,8 +46,8 @@ public class WebAuthentication: WebAuthenticationInterface {
 
         handler?.display(url, from: presenter, completion: { token in
             if let safariAuth = self.handler as? SafariWebVCAuthenticator,
-               self.presentingVC?.presentedViewController == safariAuth.safariVC {
-                self.presentingVC?.dismiss(animated: true, completion: nil)
+               let safariPresentingVC = safariAuth.safariVC?.presentingViewController {
+                safariPresentingVC.dismiss(animated: true, completion: nil)
             }
             completion(token)
         })

@@ -1,5 +1,5 @@
 PODS:
-  - WebAuthentication (0.1.0)
+  - WebAuthentication (0.1.1)
 
 DEPENDENCIES:
   - WebAuthentication (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WebAuthentication: 7a97168fcc2694f7fa1eb66e890dc4f726531716
+  WebAuthentication: 4bb3c3713e5ab53f1b318d2435aef03250b8e0d4
 
 PODFILE CHECKSUM: 5ea3aa293a0345a410cebf92ec68c5aa9ee234cd
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1
