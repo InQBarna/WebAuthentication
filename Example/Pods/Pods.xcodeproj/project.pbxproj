@@ -328,7 +328,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		39C67D3E77672250EF721A8E895CF182 /* Release */ = {
+		3D6761E3565E40F1FC046DEB4C8A02EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BA0AF68B6252AE0ED767C4DFB175B8FB /* WebAuthentication.release.xcconfig */;
 			buildSettings = {
@@ -351,7 +351,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -552,7 +552,7 @@
 			};
 			name = Debug;
 		};
-		853FDC0DAFE6F4C993124FAC7CBD89AD /* Debug */ = {
+		E837A73ADC601CB8D696E0EA57D8EC9D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3BC83DAF549A8607EE3BAEA076411DA8 /* WebAuthentication.debug.xcconfig */;
 			buildSettings = {
@@ -575,7 +575,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -606,8 +606,8 @@
 		CFE893D6F267038705C2FB5C2D4CC910 /* Build configuration list for PBXNativeTarget "WebAuthentication" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				853FDC0DAFE6F4C993124FAC7CBD89AD /* Debug */,
-				39C67D3E77672250EF721A8E895CF182 /* Release */,
+				E837A73ADC601CB8D696E0EA57D8EC9D /* Debug */,
+				3D6761E3565E40F1FC046DEB4C8A02EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

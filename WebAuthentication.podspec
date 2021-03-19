@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WebAuthentication'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'Web authentication made easier'
 
   s.description      = <<-DESC
@@ -21,9 +21,10 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/InQBarna/WebAuthentication.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
+  s.swift_version = '5.0'
 
   s.source_files = 'Sources/**/*.swift' 
-  
+    
   # s.resource_bundles = {
   #   'WebAuthentication' => ['WebAuthentication/Assets/*.png']
   # }
