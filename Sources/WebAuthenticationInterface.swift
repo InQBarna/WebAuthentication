@@ -7,9 +7,14 @@
 
 import UIKit
 
+public enum WebAuthenticationError {
+    case userCancelled
+    case error(Error)
+}
+
 /**
     Protocol for abstracting the login presentation method implementation details.
  */
 public protocol WebAuthenticationInterface {
-    func display(_ url: URL, from presenter: UIViewController, completion: @escaping ((String?) -> Void))
+    func display(_ url: URL, from presenter: UIViewController, completion: @escaping ((String?, WebAuthenticationError?) -> Void))
 }

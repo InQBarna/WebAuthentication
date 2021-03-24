@@ -17,7 +17,7 @@ import Foundation
 class ASWebAuthenticator: NSObject, WebAuthenticationInterface, ASWebAuthenticationPresentationContextProviding {
     private var authSession: ASWebAuthenticationSession?
     private weak var presenterVC: UIViewController?
-    private var completionClosure: ((String?) -> Void)?
+    private var completionClosure: ((String?, WebAuthenticationError?) -> Void)?
     private var config: AuthConfiguration
     
     init(config: AuthConfiguration) {
@@ -25,23 +25,34 @@ class ASWebAuthenticator: NSObject, WebAuthenticationInterface, ASWebAuthenticat
         super.init()
     }
 
-    func display(_ url: URL, from vc: UIViewController, completion: @escaping ((String?) -> Void)) {
+    func display(_ url: URL, from vc: UIViewController, completion: @escaping ((String?, WebAuthenticationError?) -> Void)) {
         presenterVC = vc
 
         authSession = ASWebAuthenticationSession(url: url, callbackURLScheme: config.authCallbackURLScheme) { callbackURL, error in
             guard error == nil,
                   let callbackURL = callbackURL else {
                 self.postNotification(with: nil)
-                completion(nil)
+                
+                var finalError: WebAuthenticationError?
+                if let error = error as? ASWebAuthenticationSessionError {
+                    switch error.code {
+                    case .canceledLogin:
+                        finalError = .userCancelled
+                    default:
+                        finalError = .error(error)
+                    }
+                }
+                
+                completion(nil, finalError)
                 return
             }
             let queryItems = URLComponents(string: callbackURL.absoluteString)?.queryItems
             if let token = queryItems?.filter({ $0.name == self.config.authCallbackTokenQueryParamName }).first?.value {
                 self.postNotification(with: token)
-                completion(token)
+                completion(token, nil)
             } else {
                 self.postNotification(with: nil)
-                completion(nil)
+                completion(nil, nil)
             }
         }
 
