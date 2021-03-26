@@ -58,7 +58,7 @@ class ASWebAuthenticator: NSObject, WebAuthenticationInterface, ASWebAuthenticat
 
         if #available(iOS 13.0, *) {
             authSession?.presentationContextProvider = self
-            authSession?.prefersEphemeralWebBrowserSession = false
+            authSession?.prefersEphemeralWebBrowserSession = self.config.ephemeralWebSession
         } else {
             // Fallback on earlier versions
         }
