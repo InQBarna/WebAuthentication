@@ -38,6 +38,8 @@ class ASWebAuthenticator: NSObject, WebAuthenticationInterface, ASWebAuthenticat
                     switch error.code {
                     case .canceledLogin:
                         finalError = .userCancelled
+                    case .presentationContextInvalid, .presentationContextNotProvided:
+                        finalError = .presentationError
                     default:
                         finalError = .error(error)
                     }

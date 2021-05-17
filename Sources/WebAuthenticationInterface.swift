@@ -9,6 +9,7 @@ import UIKit
 
 public enum WebAuthenticationError {
     case userCancelled
+    case presentationError
     case error(Error)
 }
 
