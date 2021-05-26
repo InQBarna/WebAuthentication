@@ -25,8 +25,8 @@ class ASWebAuthenticator: NSObject, WebAuthenticationInterface, ASWebAuthenticat
         super.init()
     }
 
-    func display(_ url: URL, from vc: UIViewController, completion: @escaping ((String?, WebAuthenticationError?) -> Void)) {
-        presenterVC = vc
+    func display(_ url: URL, from presenter: UIViewController, completion: @escaping ((Result<WebAuthenticationResult, WebAuthenticationError>) -> Void)) {
+        presenterVC = presenter
 
         authSession = ASWebAuthenticationSession(url: url, callbackURLScheme: config.authCallbackURLScheme) { callbackURL, error in
             guard error == nil,
@@ -41,20 +41,22 @@ class ASWebAuthenticator: NSObject, WebAuthenticationInterface, ASWebAuthenticat
                     case .presentationContextInvalid, .presentationContextNotProvided:
                         finalError = .presentationError
                     default:
-                        finalError = .error(error)
+                        finalError = .webAuthenticationError(error)
                     }
+                } else {
+                    finalError = .unknownError
                 }
                 
-                completion(nil, finalError)
+                completion(.failure(finalError!))
                 return
             }
             let queryItems = URLComponents(string: callbackURL.absoluteString)?.queryItems
             if let token = queryItems?.filter({ $0.name == self.config.authCallbackTokenQueryParamName }).first?.value {
                 self.postNotification(with: token)
-                completion(token, nil)
+                completion(.success(.token(token)))
             } else {
                 self.postNotification(with: nil)
-                completion(nil, nil)
+                completion(.success(.otherCallback(callbackURL)))
             }
         }
 

@@ -1,6 +1,6 @@
 {
   "name": "WebAuthentication",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "summary": "Web authentication made easier",
   "description": "Authenticator handles authentication in the corresponding web environmnet depending on the iOS version.",
   "homepage": "https://github.com/InQBarna/WebAuthentication",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/InQBarna/WebAuthentication.git",
-    "tag": "0.1.4"
+    "tag": "0.2.0"
   },
   "platforms": {
     "ios": "9.0"

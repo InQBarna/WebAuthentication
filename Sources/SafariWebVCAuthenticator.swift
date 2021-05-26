@@ -14,7 +14,7 @@ import SafariServices
  Once the deployment target is raised to iOS 12 we could just delete this implementation.
  */
 class SafariWebVCAuthenticator: WebAuthenticationInterface {
-    private var completionClosure: ((String?, WebAuthenticationError?) -> Void)?
+    private var completionClosure: ((Result<WebAuthenticationResult, WebAuthenticationError>) -> Void)?
     private var config: AuthConfiguration
     
     weak var safariVC: SFSafariViewController?
@@ -30,7 +30,7 @@ class SafariWebVCAuthenticator: WebAuthenticationInterface {
         )
     }
 
-    func display(_ url: URL, from presenter: UIViewController, completion: @escaping ((String?, WebAuthenticationError?) -> Void)) {
+    func display(_ url: URL, from presenter: UIViewController, completion: @escaping ((Result<WebAuthenticationResult, WebAuthenticationError>) -> Void)) {
         completionClosure = completion
 
         let vc = SFSafariViewController(url: url)
@@ -50,7 +50,7 @@ class SafariWebVCAuthenticator: WebAuthenticationInterface {
         if let data = notification.userInfo as? [String: String] {
             if let token = data[config.authStatusChangedNotificationInfo],
                let completion = completionClosure {
-                completion(token, nil)
+                completion(.success(.token(token)))
             }
         }
     }

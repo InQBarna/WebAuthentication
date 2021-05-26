@@ -35,7 +35,7 @@ public class WebAuthentication: WebAuthenticationInterface {
     ///   - url: authentication service url to load inside the corresponding web environment
     ///   - presenter: the viewController that will present the web environment
     ///   - completion: closure called with token value when obtained or nil if terminating without a token
-    public func display(_ url: URL, from presenter: UIViewController, completion: @escaping ((String?, WebAuthenticationError?) -> Void)) {
+    public func display(_ url: URL, from presenter: UIViewController, completion: @escaping ((Result<WebAuthenticationResult, WebAuthenticationError>) -> Void)) {
         self.presentingVC = presenter
         
         if #available(iOS 12.0, *) {
@@ -44,12 +44,12 @@ public class WebAuthentication: WebAuthenticationInterface {
             handler = SafariWebVCAuthenticator(config: config)
         }
 
-        handler?.display(url, from: presenter, completion: { token, error in
+        handler?.display(url, from: presenter, completion: { (result) in
             if let safariAuth = self.handler as? SafariWebVCAuthenticator,
                let safariPresentingVC = safariAuth.safariVC?.presentingViewController {
                 safariPresentingVC.dismiss(animated: true, completion: nil)
             }
-            completion(token, error)
+            completion(result)
         })
     }
 }
