@@ -24,7 +24,8 @@ public class WebAuthentication: WebAuthenticationInterface {
     ///   - url: authentication URL to load
     ///   - presenter: view controller that presents the web session
     ///   - completion: called with the token or an error when the flow ends
-    public func display(_ url: URL, from presenter: UIViewController, completion: @escaping ((Result<WebAuthenticationResult, WebAuthenticationError>) -> Void)) {
+    public func display(_ url: URL, from presenter: UIViewController,
+                        completion: @escaping ((Result<WebAuthenticationResult, WebAuthenticationError>) -> Void)) {
         let authenticator = ASWebAuthenticator(config: config)
         handler = authenticator
         authenticator.display(url, from: presenter, completion: completion)
