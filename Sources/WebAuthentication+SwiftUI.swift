@@ -20,7 +20,12 @@ public extension WebAuthentication {
         display(url, from: presenter, completion: completion)
     }
 
-    /// Async/await version. Resolves the presenter automatically.
+    /// Async/await version of the authentication flow. Resolves the presenter automatically.
+    ///
+    /// ```swift
+    /// let result = await auth.display(loginURL)
+    /// if case .success(.token(let token)) = result { ... }
+    /// ```
     func display(_ url: URL) async -> Result<WebAuthenticationResult, WebAuthenticationError> {
         await withCheckedContinuation { continuation in
             display(url) { result in

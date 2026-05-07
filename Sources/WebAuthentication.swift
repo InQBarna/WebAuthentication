@@ -8,12 +8,27 @@
 import UIKit
 
 /**
- Displays a web environment for authenticating.
+ Main entry point for web-based authentication.
+
+ Presents a browser session where the user can log in, then extracts
+ the token from the callback URL and delivers it via completion closure.
+
+ ```swift
+ let auth = WebAuthentication(configuration: config)
+ auth.display(loginURL, from: viewController) { result in
+     switch result {
+     case .success(.token(let token)): // use token
+     case .failure(let error): // handle error
+     }
+ }
+ ```
  */
 public class WebAuthentication: WebAuthenticationInterface {
     private var config: AuthConfiguration
     private var handler: WebAuthenticationInterface?
 
+    /// Creates a new instance with the given configuration.
+    /// - Parameter configuration: settings needed to run the authentication flow.
     public init(configuration: AuthConfiguration) {
         self.config = configuration
     }

@@ -4,42 +4,116 @@
 [![License](https://img.shields.io/cocoapods/l/WebAuthentication.svg?style=flat)](https://cocoapods.org/pods/WebAuthentication)
 [![Platform](https://img.shields.io/cocoapods/p/WebAuthentication.svg?style=flat)](https://cocoapods.org/pods/WebAuthentication)
 
+A simple library for web-based authentication (OAuth, SSO) on iOS. It presents a browser session, waits for the callback and extracts the token automatically.
+
+## Requirements
+
+- iOS 15+
+- Swift 5.5+
+
 ## Installation
 
-* SPM
-* Cocoapods: 
+### Swift Package Manager
+
+```swift
+.package(url: "https://github.com/InQBarna/WebAuthentication.git", from: "0.2.0")
+```
+
+### CocoaPods
+
 ```ruby
 pod 'WebAuthentication'
 ```
 
-## Usage 
+## Usage
 
-Create an AuthConfiguration instance with the corresponding parameters:
+### 1. Create a configuration
+
 ```swift
 let config = AuthConfiguration(
-    authCallbackURLScheme: ProfileConstants.authURLScheme,
-    authCallbackTokenQueryParamName: ProfileConstants.authTokenQueryName,
+    authCallbackURLScheme: "myapp",
+    authCallbackTokenQueryParamName: "token",
     authStatusChangedNotificationName: Notifications.authStatusChanged,
-    authStatusChangedNotificationInfo: ProfileConstants.authTokenQueryName)
-```    
-Use it to instantiate a WebAuthentication :
-```swift
-let authenticator = WebAuthentication(configuration: authConfig)
+    authStatusChangedNotificationInfo: "tokenKey"
+)
 ```
 
-Call display method passing a UIViewController that will act as the presenter of the login process
+### 2. Create an instance
+
 ```swift
-authenticator?.display(url, from: viewController!, completion: { _ })
+let auth = WebAuthentication(configuration: config)
 ```
-**Important:**
-   If your app supports an older version of iOS 12, you are responsible for handling the service callback and infering the token in AppDelegate's: 
-   ```swift
-   application(_: , open url:, options _: ) -> Bool 
-  ``` 
+
+### 3. Display the authentication flow
+
+**UIKit**
+```swift
+auth.display(loginURL, from: viewController) { result in
+    switch result {
+    case .success(.token(let token)):
+        // use token
+    case .success(.otherCallback(let url)):
+        // callback received without token
+    case .failure(let error):
+        // handle error
+    }
+}
+```
+
+**SwiftUI — callback**
+```swift
+auth.display(loginURL) { result in
+    switch result {
+    case .success(.token(let token)): // use token
+    case .failure(let error): // handle error
+    }
+}
+```
+
+**SwiftUI — async/await**
+```swift
+let result = await auth.display(loginURL)
+if case .success(.token(let token)) = result {
+    // use token
+}
+```
+
+**SwiftUI — View Modifier**
+```swift
+struct ContentView: View {
+    @State private var authURL: URL? = nil
+
+    var body: some View {
+        Button("Login") {
+            authURL = URL(string: "https://your-service.com/auth")!
+        }
+        .webAuthentication(auth, url: $authURL) { result in
+            switch result {
+            case .success(.token(let token)): // use token
+            case .failure(let error): // handle error
+            }
+        }
+    }
+}
+```
+
+### Ephemeral session
+
+Pass `ephemeralWebSession: true` to run the login in private mode — no cookies or credentials will be shared with the browser.
+
+```swift
+let config = AuthConfiguration(
+    authCallbackURLScheme: "myapp",
+    authCallbackTokenQueryParamName: "token",
+    authStatusChangedNotificationName: Notifications.authStatusChanged,
+    authStatusChangedNotificationInfo: "tokenKey",
+    ephemeralWebSession: true
+)
+```
 
 ## Author
 
-catchakos, alexis.katsaprakakis@inqbarna.com
+InQBarna, alexis.katsaprakakis@inqbarna.com
 
 ## License
 
