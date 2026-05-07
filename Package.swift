@@ -25,5 +25,9 @@ let package = Package(
             name: "WebAuthentication",
             dependencies: [],
             path: "Sources"),
+        .testTarget(
+            name: "WebAuthenticationTests",
+            dependencies: ["WebAuthentication"],
+            path: "Tests"),
     ]
 )
