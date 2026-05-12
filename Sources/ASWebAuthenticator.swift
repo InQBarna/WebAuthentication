@@ -24,7 +24,8 @@ class ASWebAuthenticator: NSObject, WebAuthenticationInterface, ASWebAuthenticat
     func display(_ url: URL, from presenter: UIViewController, completion: @escaping ((Result<WebAuthenticationResult, WebAuthenticationError>) -> Void)) {
         presenterVC = presenter
 
-        authSession = ASWebAuthenticationSession(url: url, callbackURLScheme: config.authCallbackURLScheme) { callbackURL, error in
+        authSession = ASWebAuthenticationSession(url: url, callbackURLScheme: config.authCallbackURLScheme) { [weak self] callbackURL, error in
+            guard let self else { return }
             guard error == nil, let callbackURL = callbackURL else {
                 self.postNotification(with: nil)
 
