@@ -113,7 +113,7 @@ let config = AuthConfiguration(
 
 ## Author
 
-InQBarna, alexis.katsaprakakis@inqbarna.com
+[InQBarna](https://github.com/InQBarna), [@catchakos](https://github.com/catchakos), [@alexmaxu](https://github.com/alexmaxu)
 
 ## License
 
