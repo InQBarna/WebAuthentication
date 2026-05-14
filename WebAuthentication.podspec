@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WebAuthentication'
-  s.version          = '0.2.0'
+  s.version          = '1.0.0'
   s.summary          = 'Web authentication made easier'
 
   s.description      = <<-DESC
