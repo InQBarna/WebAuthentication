@@ -1,0 +1,35 @@
+line_length: 160
+cyclomatic_complexity: 20
+function_body_length: 60
+
+disabled_rules:
+  - trailing_comma
+  - multiple_closures_with_trailing_closure
+  - opening_brace
+
+identifier_name:
+  allowed_symbols: "_"
+  min_length: 3
+  max_length:
+    warning: 70
+    error: 160
+  excluded:
+    - id
+    - vm
+    - vc
+    - to
+    - in
+
+type_name:
+  min_length: 3
+  max_length:
+    warning: 70
+    error: 160
+  excluded:
+    - Id
+    - in
+
+excluded:
+  - Example/Pods
+  - Example/Tests
+  - .bundle

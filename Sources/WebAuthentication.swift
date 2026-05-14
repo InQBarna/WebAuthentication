@@ -8,48 +8,41 @@
 import UIKit
 
 /**
- Displays a web environment for authenticating.
- 
- - important:
-    If your app supports a version older than iOS 12, you are responsible for handling the service callback and infering the token in AppDelegate's application(_: , open url:, options _: ) -> Bool method
- 
- ----
- Switches protocol implementations depending on iOS version:
- * SafariWebVCAuthenticator for iOS 11 and below
- * ASWebAuthenticator for iOS 12 and above
- 
+ Main entry point for web-based authentication.
+
+ Presents a browser session where the user can log in, then extracts
+ the token from the callback URL and delivers it via completion closure.
+
+ ```swift
+ let auth = WebAuthentication(configuration: config)
+ auth.display(loginURL, from: viewController) { result in
+     switch result {
+     case .success(.token(let token)): // use token
+     case .failure(let error): // handle error
+     }
+ }
+ ```
  */
 public class WebAuthentication: WebAuthenticationInterface {
     private var config: AuthConfiguration
     private var handler: WebAuthenticationInterface?
-    private weak var presentingVC: UIViewController?
-    
+
+    /// Creates a new instance with the given configuration.
+    /// - Parameter configuration: settings needed to run the authentication flow.
     public init(configuration: AuthConfiguration) {
         self.config = configuration
     }
-    
-    /// Displays the corresponding web environment and waits for the authentication completion
-    ///
+
+    /// Displays the web authentication flow and waits for completion.
     ///
     /// - Parameters:
-    ///   - url: authentication service url to load inside the corresponding web environment
-    ///   - presenter: the viewController that will present the web environment
-    ///   - completion: closure called with token value when obtained or nil if terminating without a token
-    public func display(_ url: URL, from presenter: UIViewController, completion: @escaping ((Result<WebAuthenticationResult, WebAuthenticationError>) -> Void)) {
-        self.presentingVC = presenter
-        
-        if #available(iOS 12.0, *) {
-            handler = ASWebAuthenticator(config: config)
-        } else {
-            handler = SafariWebVCAuthenticator(config: config)
-        }
-
-        handler?.display(url, from: presenter, completion: { (result) in
-            if let safariAuth = self.handler as? SafariWebVCAuthenticator,
-               let safariPresentingVC = safariAuth.safariVC?.presentingViewController {
-                safariPresentingVC.dismiss(animated: true, completion: nil)
-            }
-            completion(result)
-        })
+    ///   - url: authentication URL to load
+    ///   - presenter: view controller that presents the web session
+    ///   - completion: called with the token or an error when the flow ends
+    public func display(_ url: URL, from presenter: UIViewController,
+                        completion: @escaping ((Result<WebAuthenticationResult, WebAuthenticationError>) -> Void)) {
+        let authenticator = ASWebAuthenticator(config: config)
+        handler = authenticator
+        authenticator.display(url, from: presenter, completion: completion)
     }
 }
